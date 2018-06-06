@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+    <com.martin.ads.omoshiroilib.glessential.GLRootView
+        android:id="@+id/camera_view"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:id="@+id/root_control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/filter_list"
+            android:layout_width="match_parent"
+            android:layout_height="94.0dip"
+            android:background="@color/black_fifty_percent"
+            android:padding="5.0dip"
+            android:layout_alignParentBottom="true"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OmoshiroiLib</string>
+    <string name="not_support_media_codec">It seems MediaCodec is not supported on your device or API is below 4.3</string>
+</resources>

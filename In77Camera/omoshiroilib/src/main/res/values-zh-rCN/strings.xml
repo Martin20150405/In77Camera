@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="not_support_media_codec">您的设备不支持硬编码或版本低于4.3，无法录像</string>
+</resources>

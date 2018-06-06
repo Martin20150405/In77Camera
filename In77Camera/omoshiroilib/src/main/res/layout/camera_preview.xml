@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000">
+
+    <com.martin.ads.omoshiroilib.glessential.GLRootView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.martin.ads.omoshiroilib.ui.CaptureAnimation
+        android:id="@+id/capture_animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/camera_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+            android:id="@+id/btn_camera_setting"
+            android:layout_width="55.0dip"
+            android:layout_height="55.0dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/camera_setting" />
+
+        <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="55.0dip"
+            android:layout_height="55.0dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_camera" />
+
+        <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+            android:id="@+id/btn_app_setting"
+            android:layout_width="55.0dip"
+            android:layout_height="55.0dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/app_setting"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_camera_setting_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47.0dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_camera_setting_content_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/camera_setting_content_background_arrow" />
+
+        <LinearLayout
+            android:id="@+id/ll_camera_setting_content"
+            android:layout_width="325.0dip"
+            android:layout_height="120.0dip"
+            android:layout_below="@id/iv_camera_setting_content_arrow"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/camera_setting_content_background"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip">
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+                    android:id="@+id/btn_camera_touch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16.0dip"
+                    android:background="@drawable/camera_flash_touch_selector"
+                    android:checked="false" />
+
+                <TextView
+                    android:id="@+id/tv_camera_touch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/btn_camera_touch"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6.0dip"
+                    android:text="触屏拍摄"
+                    android:textColor="@drawable/setting_color_selector"
+                    android:textSize="11.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+                    android:id="@+id/btn_camera_time_lapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16.0dip"
+                    android:background="@drawable/camera_flash_time_selector"
+                    android:checked="false" />
+
+                <TextView
+                    android:id="@+id/tv_camera_time_lapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/btn_camera_time_lapse"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6.0dip"
+                    android:text="延时拍摄"
+                    android:textColor="@drawable/setting_color_selector"
+                    android:textSize="11.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+                    android:id="@+id/btn_camera_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16.0dip"
+                    android:background="@drawable/camera_flash_light_selector"
+                    android:checked="false" />
+
+                <TextView
+                    android:id="@+id/tv_camera_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/btn_camera_light"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6.0dip"
+                    android:text="闪光灯"
+                    android:textColor="@drawable/setting_color_selector"
+                    android:textSize="11.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+                    android:id="@+id/btn_camera_picture_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16.0dip"
+                    android:background="@drawable/border_camera"
+                    android:checked="false" />
+
+                <TextView
+                    android:id="@+id/tv_camera_picture_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/btn_camera_picture_type"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6.0dip"
+                    android:text="小窗"
+                    android:textColor="@drawable/setting_color_selector"
+                    android:textSize="11.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/filter_list"
+        android:layout_width="match_parent"
+        android:layout_height="94.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="#88000000"
+        android:padding="5.0dip"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/effect_list"
+        android:layout_width="match_parent"
+        android:layout_height="76.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="#88000000"
+        android:padding="5.0dip"
+        android:visibility="gone"
+        android:scrollbars="none"/>
+
+    <LinearLayout
+        android:id="@+id/test_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/record_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#44000000"
+            android:padding="3dp"
+            android:text="record"
+            android:textColor="#dddddd"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+            android:id="@+id/btn_switch_filter"
+            android:layout_width="55.0dip"
+            android:layout_height="55.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_choose_filter"
+            android:checked="true" />
+
+        <ImageView
+            android:id="@+id/iv_new_filter_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/btn_switch_filter"
+            android:layout_alignTop="@id/btn_switch_filter"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="12.0dip"
+            android:background="@drawable/effect_red_point"
+            android:visibility="gone" />
+
+        <com.martin.ads.omoshiroilib.ui.module.EffectsButton
+            android:id="@+id/btn_switch_face"
+            android:layout_width="55.0dip"
+            android:layout_height="55.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_choose_face" />
+
+        <com.martin.ads.omoshiroilib.ui.module.RecordButton
+            android:id="@+id/btn_takePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11.0dip" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_frag_camera_action_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120.0dip"
+        android:src="@drawable/tip_camera_action"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_focus_anim_view"
+        android:layout_width="101.0dip"
+        android:layout_height="101.0dip"
+        android:background="@drawable/camera_btn_focus"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_frag_camera_time_lapse_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="100.0dip" />
+</RelativeLayout>
